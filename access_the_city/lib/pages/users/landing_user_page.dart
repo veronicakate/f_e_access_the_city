@@ -9,8 +9,17 @@ class UserLanding extends StatelessWidget {
       appBar: AppBar(
         title: Text("User Landing Page"),
       ),
-      body: Column(children: <Widget>[
+   
+   body: Center(
+    
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        
+        children: <Widget>[
+          
+        
         RaisedButton(
+        
           child: Text('Sign In'),
           onPressed: () {
             Navigator.push(
@@ -29,6 +38,13 @@ class UserLanding extends StatelessWidget {
           },
         ),
       ]),
+    )
+   
     );
   }
+
 }
+
+
+
+
