@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:access_the_city/pages/owners/landing_owner_page.dart';
+import 'package:access_the_city/pages/owners/owner_dashboard.dart';
 
 class OwnerSignIn extends StatelessWidget {
   @override
@@ -10,11 +10,11 @@ class OwnerSignIn extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('third page'),
+          child: Text('Owner Dashboard'),
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => OwnerLanding()),
+              MaterialPageRoute(builder: (context) => OwnerDashboard()),
             );
           },
         ),
