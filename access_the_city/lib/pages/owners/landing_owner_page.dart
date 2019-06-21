@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:access_the_city/pages/owners/sign_in_owner.dart';
+import 'package:access_the_city/pages/owners/owner_join.dart';
 
 class OwnerLanding extends StatelessWidget {
   @override
@@ -23,7 +24,7 @@ class OwnerLanding extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => OwnerSignIn()),
+              MaterialPageRoute(builder: (context) => OwnerJoin()),
             );
           },
         ),
