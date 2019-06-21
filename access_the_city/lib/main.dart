@@ -1,4 +1,4 @@
-import 'package:access_the_city/pages/landingPage.dart';
+import 'package:access_the_city/pages/landing_page.dart';
 import 'package:flutter/material.dart';
 
 //this is the starting point for the application.
