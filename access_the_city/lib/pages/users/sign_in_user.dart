@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:access_the_city/pages/users/user_dashboard.dart';
+import 'package:access_the_city/pages/users/select_location.dart';
 
 class UserSignIn extends StatelessWidget {
   @override
