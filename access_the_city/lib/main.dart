@@ -5,6 +5,12 @@ import 'package:flutter/material.dart';
 void main() {
   //run app takes a widget and material app widget gives us functionality
   runApp(new MaterialApp(
+    
+    debugShowCheckedModeBanner: false,
     home: LandingPage(),
-  ));
+    
+  ),
+  
+  );
+
 }
