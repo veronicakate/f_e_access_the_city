@@ -9,6 +9,7 @@ class LandingPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Landing Page"),
+
       ),
       body: Column(children: <Widget>[
         RaisedButton(
