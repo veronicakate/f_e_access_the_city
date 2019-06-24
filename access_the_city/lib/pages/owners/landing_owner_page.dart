@@ -3,24 +3,78 @@ import 'package:access_the_city/pages/owners/sign_in_owner.dart';
 import 'package:access_the_city/pages/owners/owner_join_1.dart';
 
 class OwnerLanding extends StatelessWidget {
+
   @override
+  
   Widget build(BuildContext context) {
+
     return Scaffold(
+
+       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Owner Landing Page"),
+       
+        backgroundColor: Colors.white,
+         elevation:0.0,
+        
+    title: Row( 
+     crossAxisAlignment:CrossAxisAlignment.center,
+      mainAxisAlignment:MainAxisAlignment.end,
+    children:[
+      Image.asset("images/logo.png", width:70.0,height:40.0),
+      Container(  
+        // padding:const EdgeInsets.all(20.0),
+      )
+      ]
+    ),
+        iconTheme: IconThemeData(color: Colors.deepPurple),
+                // iconTheme: IconThemeData(color: Colors.red,size:100, opacity: 1),
+
       ),
-      body: Column(children: <Widget>[
-        RaisedButton(
+   
+   body: Center(
+     
+    
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        
+        children: <Widget>[
+          
+            Container(
+              width: 300.0,
+              height: 60.0,
+          
+              margin: EdgeInsets.all(18.0),
+ 
+              child: RaisedButton(
+                shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
           child: Text('Sign In'),
+          
+          //  padding: const EdgeInsets.all(18.0),
+           textColor: Colors.white,
+           color: Colors.deepPurple,
+
           onPressed: () {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => OwnerSignIn()),
             );
           },
+        
         ),
-        RaisedButton(
+            ),
+       Container(
+         width: 300.0,
+          height: 60.0,
+ margin: EdgeInsets.all(10.0),
+      child:  RaisedButton(
+        
+
+ shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
           child: Text('Join'),
+            padding: const EdgeInsets.all(18.0),
+           textColor: Colors.white,
+          color: Colors.deepPurple,
+
           onPressed: () {
             Navigator.push(
               context,
@@ -28,7 +82,17 @@ class OwnerLanding extends StatelessWidget {
             );
           },
         ),
-      ]),
+       ),
+
+      ])
+    )
+   
     );
   }
+
 }
+
+
+
+
+
