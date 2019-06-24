@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:access_the_city/pages/owners/sign_in_owner.dart';
-import 'package:access_the_city/pages/owners/owner_join.dart';
+import 'package:access_the_city/pages/owners/owner_join_1.dart';
 
 class OwnerLanding extends StatelessWidget {
   @override
