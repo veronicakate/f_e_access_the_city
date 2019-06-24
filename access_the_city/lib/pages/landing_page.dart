@@ -7,13 +7,23 @@ class LandingPage extends StatelessWidget {
   @override
     Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Landing Page"),
 
-      ),
-      body: Column(children: <Widget>[
+      body: Center(child: 
+      
+      Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+        Image.asset("images/logo.png", width:70.0,height:40.0),
+
         RaisedButton(
+        shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
           child: Text('User'),
+          
+          //  padding: const EdgeInsets.all(18.0),
+           textColor: Colors.white,
+           color: Colors.deepPurple,
+
           onPressed: () {
             Navigator.push(
               context,
@@ -21,8 +31,14 @@ class LandingPage extends StatelessWidget {
             );
           },
         ),
+        
         RaisedButton(
-          child: Text('Owner'),
+        shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+          child: Text('Owner'),          
+          //  padding: const EdgeInsets.all(18.0),
+           textColor: Colors.white,
+           color: Colors.deepPurple,
+
           onPressed: () {
             Navigator.push(
               context,
@@ -30,7 +46,10 @@ class LandingPage extends StatelessWidget {
             );
           },
         ),
-      ]),
+      ])
+      
+      
+      ,)
     );
   }
 }
