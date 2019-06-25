@@ -29,6 +29,7 @@ class _UserSignInState extends State<UserSignIn> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
+      // resizeToAvoidBottomInset: false,
         appBar: AppBar(
        
         backgroundColor: Colors.white,
@@ -184,7 +185,7 @@ class _UserSignInState extends State<UserSignIn> {
         context,
        MaterialPageRoute(builder: (context) => UserDashboard()),
      );   
-         print(emailController);
+        //  print(emailController);
         debugPrint(response.body);
 
     }
