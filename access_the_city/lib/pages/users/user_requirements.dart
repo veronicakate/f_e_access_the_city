@@ -1,4 +1,4 @@
-import 'package:access_the_city/pages/users/user_dashboard.dart';
+import 'package:access_the_city/pages/users/select_location.dart';
 import 'package:flutter/material.dart';
 
 class UserRequirements extends StatelessWidget {

@@ -1,20 +1,20 @@
+import 'package:access_the_city/pages/users/select_activity.dart';
 import 'package:flutter/material.dart';
-import 'package:access_the_city/pages/owners/owner_join_1.dart';
 
-class AddBusiness extends StatelessWidget {
+class UserDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add Another Business"),
+        title: Text("Select Location"),
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('Register New Business'),
+          child: Text('Select Activity'),
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => OwnerJoin()),
+              MaterialPageRoute(builder: (context) => SelectActivity()),
             );
           },
         ),

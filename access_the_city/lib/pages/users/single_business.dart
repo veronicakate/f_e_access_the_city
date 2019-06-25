@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:access_the_city/pages/users/user_dashboard.dart';
+import 'package:access_the_city/pages/users/select_location.dart';
 
 class SingleBusiness extends StatelessWidget {
   @override
@@ -10,7 +10,7 @@ class SingleBusiness extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('User Dashboard'),
+          child: Text('Search Again'),
           onPressed: () {
             Navigator.push(
               context,

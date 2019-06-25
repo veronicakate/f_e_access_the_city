@@ -1,20 +1,20 @@
+import 'package:access_the_city/pages/users/list_of_businesses.dart';
 import 'package:flutter/material.dart';
-import 'package:access_the_city/pages/owners/owner_join_1.dart';
 
-class AddBusiness extends StatelessWidget {
+class SelectActivity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add Another Business"),
+        title: Text("Select Activity"),
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('Register New Business'),
+          child: Text('View Options'),
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => OwnerJoin()),
+              MaterialPageRoute(builder: (context) => BusinessList()),
             );
           },
         ),
