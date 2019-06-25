@@ -1,7 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:access_the_city/pages/owners/owner_dashboard.dart';
 
-class OwnerSignIn extends StatelessWidget {
+import 'package:access_the_city/pages/owners/owner_dashboard.dart';
+import 'package:http/http.dart'as http;
+// import 'dart:async';
+
+import 'dart:convert';
+class OwnerSignIn extends StatefulWidget {
+
+@override
+_OwnerSignInState createState() => _OwnerSignInState();
+}
+
+class _OwnerSignInState extends State<OwnerSignIn> {
+  Map data;
+  List userData;
+  TextEditingController emailController = new TextEditingController();
+    TextEditingController passwordController = new TextEditingController();
+
+  
+
+     @override 
+  void initState(){
+    super.initState();
+  }
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +83,8 @@ class OwnerSignIn extends StatelessWidget {
           Container(  
             padding: EdgeInsets.only(top:35.0,left: 20.0,right:20.0),
             child: Column(children: <Widget>[
-              TextField( 
+               TextField( 
+                 controller: emailController,
                 decoration:  InputDecoration( 
                   labelText: 'EMAIL', 
                   labelStyle: TextStyle(fontFamily: 'Montserrat', 
@@ -85,6 +109,8 @@ class OwnerSignIn extends StatelessWidget {
 
                 ),
                 obscureText: true,
+                controller: passwordController
+
               ),
               SizedBox(height: 20.0),
               Container ( 
@@ -108,10 +134,9 @@ class OwnerSignIn extends StatelessWidget {
                   elevation: 7.0, 
                   child:GestureDetector ( 
                     onTap: () { 
-       Navigator.push(
-              context,
-        MaterialPageRoute(builder: (context) => OwnerDashboard()),
-          );
+     
+       getData(emailController.text,passwordController.text);
+              
                     },
                     child:Center( 
                       child:Text( 
@@ -139,31 +164,64 @@ class OwnerSignIn extends StatelessWidget {
       ),
     );
   }
+    getData(email,password) async {
+   
+   final Map<String, String> data = {
+    "email": "${email}",
+    "password": "${password}"
+    };
+
+      // final Map<String, String> data = {"email":"velit.justo.nec@risusDonecegestas.co.uk","password":"WKS86ILH1XD"};
+
+  
+     var response =  await  http.post('https://access-the-city-backend.herokuapp.com/api/ownerlogin',headers: {
+        "Accept":"application/json",},body:json.encode(data));
+
+
+  print(response.statusCode);
+        if(response.statusCode == 202) {
+  Navigator.push(
+        context,
+       MaterialPageRoute(builder: (context) => OwnerDashboard()),
+     );   
+         print(emailController);
+        debugPrint(response.body);
+
+    }
+    else{
+      var alerDialog = AlertDialog( 
+        title: Text ('Dialog'),
+        content: Text('OWNER NOT FOUND!'),
+         actions: <Widget>[
+          FlatButton(
+            child: Text('Ok'),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ],
+      );
+      showDialog( 
+        context: context, 
+        builder:(BuildContext context){
+              debugPrint(response.body);
+         print(emailController.text);
+
+          return alerDialog;
+        },
+       
+      );
+   
+  
+ 
+
+  }
+   emailController.text = '';
+    passwordController.text='';
+}
+
+
 }
 
 
 
-
-//////////////////////////////////////
-///
-///class UserSignIn extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text("User Sign In"),
-//       ),
-//       body: Center(
-//         child: RaisedButton(
-//           child: Text('User Dashboard'),
-//           onPressed: () {
-//             Navigator.push(
-//               context,
-//               MaterialPageRoute(builder: (context) => UserDashboard()),
-//             );
-//           },
-//         ),
-//       ),
-//     );
-//   }
-// }
