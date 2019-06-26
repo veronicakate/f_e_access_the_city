@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:access_the_city/pages/users/select_location.dart';
+import 'package:url_launcher/url_launcher.dart' as UrlLauncher;
 
 class SingleBusiness extends StatelessWidget {
   @override
@@ -78,7 +78,7 @@ class SingleBusiness extends StatelessWidget {
               Container(
                 width: 300.0,
                 height: 60.0,
-                margin: EdgeInsets.all(18.0),
+                margin: EdgeInsets.only(top: 50),
                 child: RaisedButton(
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(20.0)),
@@ -86,13 +86,15 @@ class SingleBusiness extends StatelessWidget {
                   //  padding: const EdgeInsets.all(18.0),
                   textColor: Colors.white,
                   color: Colors.deepPurple,
-                  onPressed: () {},
+                  onPressed: () {
+                    UrlLauncher.launch("tel://+441111111111");
+                  },
                 ),
               ),
               Container(
                 width: 300.0,
                 height: 60.0,
-                margin: EdgeInsets.all(10.0),
+                margin: EdgeInsets.only(top: 30),
                 child: RaisedButton(
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(20.0)),
