@@ -12,18 +12,20 @@ class SingleBusiness extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Image.asset("images/logo.png", width: 70.0, height: 40.0),
-                Container(
-                    // padding:const EdgeInsets.all(20.0),
-                    )
+                Image.asset("images/logo.png", width: 70.0, height: 40.0)
               ]),
           iconTheme: IconThemeData(color: Colors.deepPurple),
         ),
-        body: Column(children: [
+        body: ListView(children: [
           Center(
-              child: Text('NQ Pizza',
+              child: Text('Crazy Pedro\'s',
                   style:
                       TextStyle(fontWeight: FontWeight.bold, fontSize: 50.0))),
+          Center(
+              child: Container(
+                  padding: EdgeInsets.only(top: 20),
+                  child: Image.asset('images/crazypedros.jpg'),
+                  width: 300.0)),
           Align(
               alignment: Alignment.topLeft,
               child: Container(
@@ -31,11 +33,9 @@ class SingleBusiness extends StatelessWidget {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Text('Description',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0)),
                         Text(
-                            'We love to party all the time at NQ Pizza\'s. Grab a Frozen Margarita and a slice of Pizza and watch the party unfold')
+                            'We love to party all the time at NQ Pizza\'s. Grab a Frozen Margarita and a slice of Pizza and watch the party unfold',
+                            style: TextStyle(fontSize: 20.0))
                       ]))),
           Align(
               alignment: Alignment.topLeft,
@@ -71,7 +71,7 @@ class SingleBusiness extends StatelessWidget {
                         Text('Address',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20.0)),
-                        Text('Stars')
+                        Text('address', style: TextStyle(fontSize: 20.0))
                       ]))),
           Center(
             child: Column(children: [
@@ -83,7 +83,6 @@ class SingleBusiness extends StatelessWidget {
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(20.0)),
                   child: Text('Call'),
-                  //  padding: const EdgeInsets.all(18.0),
                   textColor: Colors.white,
                   color: Colors.deepPurple,
                   onPressed: () {
@@ -94,12 +93,11 @@ class SingleBusiness extends StatelessWidget {
               Container(
                 width: 300.0,
                 height: 60.0,
-                margin: EdgeInsets.only(top: 30),
+                margin: EdgeInsets.only(top: 30, bottom: 50),
                 child: RaisedButton(
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(20.0)),
                   child: Text('Get Directions'),
-                  //  padding: const EdgeInsets.all(18.0),
                   textColor: Colors.white,
                   color: Colors.deepPurple,
                   onPressed: () {},
