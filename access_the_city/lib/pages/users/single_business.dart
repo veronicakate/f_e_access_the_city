@@ -44,10 +44,10 @@ class SingleBusiness extends StatelessWidget {
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset('images/star.png', width: 40),
-                        Image.asset('images/star.png', width: 40),
-                        Image.asset('images/star.png', width: 40),
-                        Image.asset('images/star.png', width: 40)
+                        Image.asset('images/star.png', width: 50),
+                        Image.asset('images/star.png', width: 50),
+                        Image.asset('images/star.png', width: 50),
+                        Image.asset('images/star.png', width: 50)
                       ]))),
           Align(
               alignment: Alignment.topLeft,
