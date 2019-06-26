@@ -38,16 +38,16 @@ class SingleBusiness extends StatelessWidget {
                             style: TextStyle(fontSize: 20.0))
                       ]))),
           Align(
-              alignment: Alignment.topLeft,
+              alignment: Alignment.center,
               child: Container(
                   margin: EdgeInsets.only(top: 20.0, left: 20.0),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Rating',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0)),
-                        Text('Stars')
+                        Image.asset('images/star.png', width: 40),
+                        Image.asset('images/star.png', width: 40),
+                        Image.asset('images/star.png', width: 40),
+                        Image.asset('images/star.png', width: 40)
                       ]))),
           Align(
               alignment: Alignment.topLeft,
