@@ -29,34 +29,19 @@ class OwnerJoin extends StatelessWidget {
       body: Column( 
         crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Container( 
+          Container( 
           child: Stack(children: <Widget>[ 
             Container(padding:  EdgeInsets.fromLTRB(15.0,100.0,0.0, 0.0),
             child: Text( 
-              'Owner', 
+              'Register your business', 
               style: TextStyle( 
-                fontSize: 80.0, fontWeight: FontWeight.normal ),
+                fontSize: 30.0, fontWeight: FontWeight.normal ),
             ),
             )   ,
-              Container( 
-                padding:  EdgeInsets.fromLTRB(15.0,175.0,0.0, 0.0),
-            child: Text( 
-              'Register', 
-              style: TextStyle( 
-                fontSize: 80.0, fontWeight: FontWeight.normal ),
-            ),
-            ),
-            Container( 
-                padding:  EdgeInsets.fromLTRB(220.0,175.0,0.0, 0.0),
-            child: Text( 
-              '.', 
-              style: TextStyle( 
-                fontSize: 80.0, fontWeight: FontWeight.bold,color: Colors.black ),
-            ),
-            )
           ],
           )
           ),
+
           Container(  
             padding: EdgeInsets.only(top:35.0,left: 20.0,right:20.0),
             child: Column(children: <Widget>[
@@ -89,11 +74,11 @@ class OwnerJoin extends StatelessWidget {
               SizedBox(height: 20.0),
               SizedBox(height: 40.0),
               Container( 
-                height: 40.0, 
+                height: 60.0, 
                 child: Material( 
                   borderRadius:  BorderRadius.circular(20.0), 
                   shadowColor: Colors.grey,
-                  color: Colors.grey,
+                  color: Colors.deepPurple,
                   elevation: 7.0, 
                   child:GestureDetector ( 
                     onTap: () { 
