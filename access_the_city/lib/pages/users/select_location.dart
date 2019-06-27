@@ -1,5 +1,5 @@
 import 'package:access_the_city/pages/users/select_activity.dart';
-
+import 'package:access_the_city/pages/users/landing_user_page.dart';
 import 'package:flutter/material.dart';
 
 Color hexToColor(String code) {
@@ -34,7 +34,12 @@ class _UserDashboardState extends State<UserDashboard> {
                     child: Text('Logout'),
                     textColor: Colors.white,
                     color: Colors.deepPurple,
-                    onPressed: () {},
+                    onPressed: () {
+                      var route = new MaterialPageRoute(
+                        builder: (BuildContext context) => new UserLanding(),
+                      );
+                      Navigator.of(context).push(route);
+                    },
                   )),
               Image.asset("images/logo.png", width: 70.0, height: 40.0),
             ]),
