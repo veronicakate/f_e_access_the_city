@@ -50,10 +50,9 @@ class SingleBusiness extends StatelessWidget {
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset('images/star.png', width: 50),
-                        Image.asset('images/star.png', width: 50),
-                        Image.asset('images/star.png', width: 50),
-                        Image.asset('images/star.png', width: 50)
+                        Tooltip(
+                            message: '4 stars',
+                            child: Image.asset('images/stars.png'))
                       ]))),
           Align(
               alignment: Alignment.topLeft,
