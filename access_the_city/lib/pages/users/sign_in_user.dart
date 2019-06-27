@@ -54,7 +54,7 @@ class _UserSignInState extends State<UserSignIn> {
                 child: Text(
                   'Login',
                   style:
-                      TextStyle(fontSize: 80.0, fontWeight: FontWeight.normal),
+                      TextStyle(fontSize: 80.0, fontWeight: FontWeight.normal)
                 ),
               )
             ],
