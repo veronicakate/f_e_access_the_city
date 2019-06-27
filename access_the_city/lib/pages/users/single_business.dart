@@ -65,7 +65,22 @@ class SingleBusiness extends StatelessWidget {
                         Text('Facilities',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20.0)),
-                        Text('Stars')
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Tooltip(
+                                  message: 'wheelchair access',
+                                  child: Image.asset('images/mobility.png',
+                                      width: 100, fit: BoxFit.cover)),
+                              Tooltip(
+                                  message: 'guide dog',
+                                  child: Image.asset('images/dog.png',
+                                      width: 100, fit: BoxFit.cover)),
+                              Tooltip(
+                                  message: 'audio description',
+                                  child: Image.asset('images/audiodesc.png',
+                                      width: 100, fit: BoxFit.cover))
+                            ])
                       ]))),
           Align(
               alignment: Alignment.topLeft,
@@ -89,7 +104,7 @@ class SingleBusiness extends StatelessWidget {
                 child: RaisedButton(
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(20.0)),
-                  child: Text('Call'),
+                  child: Text('CALL', style: TextStyle(fontSize: 30.00)),
                   textColor: Colors.white,
                   color: Colors.deepPurple,
                   onPressed: () {
@@ -104,7 +119,8 @@ class SingleBusiness extends StatelessWidget {
                 child: RaisedButton(
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(20.0)),
-                  child: Text('Get Directions'),
+                  child:
+                      Text('GET DIRECTIONS', style: TextStyle(fontSize: 30.00)),
                   textColor: Colors.white,
                   color: Colors.deepPurple,
                   onPressed: () {},

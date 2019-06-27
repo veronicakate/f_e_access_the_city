@@ -111,6 +111,7 @@ class _UserDashboardState extends State<UserDashboard> {
                           child: Text(
                             'SUBMIT',
                             style: TextStyle(
+                                fontSize: 35.00,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Montserrat'),
