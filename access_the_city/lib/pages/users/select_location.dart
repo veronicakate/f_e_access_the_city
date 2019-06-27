@@ -19,8 +19,24 @@ class _UserDashboardState extends State<UserDashboard> {
     return Scaffold(
             resizeToAvoidBottomPadding: false,
 
-      appBar: AppBar(
-        title: Text("Select Location"),
+       appBar: AppBar(
+       
+        backgroundColor: Colors.white,
+         elevation:0.0,
+        
+    title: Row( 
+     crossAxisAlignment:CrossAxisAlignment.center,
+      mainAxisAlignment:MainAxisAlignment.end,
+    children:[
+      Image.asset("images/logo.png", width:70.0,height:40.0),
+      Container(  
+        // padding:const EdgeInsets.all(20.0),
+      )
+      ]
+    ),
+        iconTheme: IconThemeData(color: Colors.deepPurple),
+                // iconTheme: IconThemeData(color: Colors.red,size:100, opacity: 1),
+
       ),
    body: Column( 
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,14 +99,10 @@ class _UserDashboardState extends State<UserDashboard> {
                   elevation: 7.0, 
                   child:GestureDetector ( 
                     onTap: () { 
-                      // SelectActivity().getLocation(locationController.text);
                       var route = new MaterialPageRoute(builder:(BuildContext context) => new SelectActivity(value: _locationController.text,),);
                       Navigator.of(context).push(route);
-                      
-    //    Navigator.push(
-    //     context,
-    //    MaterialPageRoute(builder: (context) => SelectActivity()),
-    //  );              
+
+           
                   },
                     child:Center( 
                       child:Text( 

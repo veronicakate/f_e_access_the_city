@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:access_the_city/pages/owners/owner_dashboard.dart';
 import 'package:http/http.dart'as http;
-// import 'dart:async';
 
 import 'dart:convert';
 class OwnerSignIn extends StatefulWidget {
@@ -30,7 +29,7 @@ class _OwnerSignInState extends State<OwnerSignIn> {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
         appBar: AppBar(
-       
+        
         backgroundColor: Colors.white,
          elevation:0.0,
         
@@ -40,7 +39,7 @@ class _OwnerSignInState extends State<OwnerSignIn> {
     children:[
       Image.asset("images/logo.png", width:70.0,height:40.0),
       Container(  
-        // padding:const EdgeInsets.all(20.0),
+        // padding:const EdgeInsets.all(20.0)
       )
       ]
     ),

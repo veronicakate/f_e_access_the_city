@@ -1,9 +1,6 @@
 import 'package:access_the_city/pages/users/list_of_businesses.dart';
 import 'package:flutter/material.dart';
-// import 'package:access_the_city/pages/users/select_location.dart';
 import 'package:http/http.dart'as http;
-import 'dart:convert';
-
 
 class  SelectActivity  extends StatefulWidget {
   final String value;
@@ -14,11 +11,29 @@ class  SelectActivity  extends StatefulWidget {
 }
 
 class _SelectActivityState extends State<SelectActivity> {
+           String activity;
+          String typeMessage = '';
   @override
   Widget build(BuildContext context) {
         return Scaffold(
-      appBar: AppBar(
-        title: Text("Select Activity"),
+        appBar: AppBar(
+       
+        backgroundColor: Colors.white,
+         elevation:0.0,
+        
+    title: Row( 
+     crossAxisAlignment:CrossAxisAlignment.center,
+      mainAxisAlignment:MainAxisAlignment.end,
+    children:[
+      // Image.asset("images/logo.png", width:70.0,height:40.0),
+      Container(  
+        // padding:const EdgeInsets.all(20.0),
+      )
+      ]
+    ),
+        iconTheme: IconThemeData(color: Colors.deepPurple),
+                // iconTheme: IconThemeData(color: Colors.red,size:100, opacity: 1),
+
       ),
       body: 
        new GridView.count( 
@@ -28,20 +43,7 @@ class _SelectActivityState extends State<SelectActivity> {
         
         children: _buildGridTiles(6),
       ),
-    //   body: Center( 
-    //        child: RaisedButton(
-    //       child: Text('View Options'),
-    //       onPressed: () {
-    //         getLocation("${widget.value}");
-    //           //  debugPrint("${widget.value}");        // print(t.createState().locationController.text);
 
-    //         // Navigator.push(
-    //         //   context,
-    //         //   MaterialPageRoute(builder: (context) => BusinessList()),
-    //         //   );
-    //  }
-    //     ),
-    //   ),
   
         );
   }
@@ -56,27 +58,62 @@ class _SelectActivityState extends State<SelectActivity> {
 
   //////////////////http get request//////////////////////
   ///
-   getLocation(value) async {
-     var url = 'https://access-the-city-backend.herokuapp.com/api/businesses/?city=${value}&type=food';
+   getLocation(value,index) async { 
 
-     debugPrint(value);
-    //  var queryParam = {
-    //    'city':'Manchester',
-    //    'type':'food'
-    //  };
-    //  var uri = 
 
+    
+     //print(index);
+     if(index == 0){
+       activity = 'attraction';
+      
+
+     }        else if(index == 1)    {
+       activity = 'food';
+
+     }
+     else if(index == 2)    {
+       activity = 'drink';
+
+     }
+        else if(index == 3)    {
+       activity = 'entertainment';
+
+     }
+      else if(index == 4)    {
+       activity = 'service';
+
+     }
+     else if(index == 5)    {
+       activity = 'retail'; 
+
+     }
+
+       typeMessage = activity;
+       print(typeMessage);
+
+
+         print(activity);
+
+     var url = 'https://access-the-city-backend.herokuapp.com/api/businesses/?city=${value}&type=${activity}';
+
+
+    
   var response =    await http.get(url);
-       // var response = await http.get(uri);
+
+  
+
+var route = new MaterialPageRoute(builder:(BuildContext context) => new BusinessList(test: response.body),);
+                      Navigator.of(context).push(route);
+     
     
   
 
 
 
-  print(response.statusCode);
     
     
     }
+
       List<Widget> _buildGridTiles(numberOfTiles){
         List<Container> containers = new List<Container>.generate(numberOfTiles, 
         (int index){
@@ -85,8 +122,17 @@ class _SelectActivityState extends State<SelectActivity> {
           return new Container( 
            width: 100,
            height: 600,
-            child: Center (child: new Image.asset(imageName),
-          ),
+            child: FlatButton (onPressed:(){
+              
+           getLocation("${widget.value}",index);     
+
+                  },
+                  
+            child: Tooltip( child: new Image.asset(imageName,width: 200,height: 150,fit: BoxFit.cover),
+            message:  typeMessage
+
+            )
+        ),
           );
         }
 
@@ -100,37 +146,3 @@ class _SelectActivityState extends State<SelectActivity> {
 
 
 
-
-// class SelectActivity extends StatelessWidget {
-// var loc ;
-//   @override
-//   Widget build(BuildContext context) {
-//     UserDashboard t = new UserDashboard();
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text("Select Activity"),
-//       ),
-//       body: Center(
-//         child: RaisedButton(
-//           child: Text('View Options'),
-//           onPressed: () {
-//             debugPrint(loc);
-//                        // print(t.createState().locationController.text);
-
-//             // Navigator.push(
-//             //   context,
-//             //   MaterialPageRoute(builder: (context) => BusinessList()),
-//             // );
-//           }
-//         ),
-//       ),
-//     );
-//   }
-   
-         
-
-//  //return print('test');;
-
-//     }
- 
-// }

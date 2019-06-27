@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:access_the_city/pages/users/select_location.dart';
 import 'package:http/http.dart'as http;
-// import 'dart:async';
 
 import 'dart:convert';
 class UserSignIn extends StatefulWidget {
@@ -49,11 +48,12 @@ class _UserSignInState extends State<UserSignIn> {
                 // iconTheme: IconThemeData(color: Colors.red,size:100, opacity: 1),
 
       ),
-   
       body: Column( 
         crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
+        
         Container( 
+          
           child: Stack(children: <Widget>[ 
             Container(padding:  EdgeInsets.fromLTRB(15.0,100.0,0.0, 0.0),
             child: Text( 
@@ -145,7 +145,8 @@ class _UserSignInState extends State<UserSignIn> {
                         style: TextStyle( 
                         color: Colors.white, 
                         fontWeight: FontWeight.bold, 
-                        fontFamily:  'Montserrat'
+                        fontFamily:  'Montserrat',
+                        // fontSize:    20.0,
                         ),
                       ) ,
                     )
