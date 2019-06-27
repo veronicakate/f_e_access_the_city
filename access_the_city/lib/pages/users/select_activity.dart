@@ -35,15 +35,18 @@ class _SelectActivityState extends State<SelectActivity> {
                 // iconTheme: IconThemeData(color: Colors.red,size:100, opacity: 1),
 
       ),
+
+          
       body: 
        new GridView.count( 
+        
         crossAxisCount: 2,
         mainAxisSpacing: 0,
         crossAxisSpacing: 0,
         
         children: _buildGridTiles(6),
       ),
-
+backgroundColor: Colors.white,
   
         );
   }
@@ -60,7 +63,7 @@ class _SelectActivityState extends State<SelectActivity> {
   ///
    getLocation(value,index) async { 
 
-
+  
     
      //print(index);
      if(index == 0){
@@ -88,13 +91,13 @@ class _SelectActivityState extends State<SelectActivity> {
 
      }
 
-       typeMessage = activity;
-       print(typeMessage);
+      //  typeMessage = activity;
+      //  print(typeMessage);
 
 
-         print(activity);
+         print(index);
 
-     var url = 'https://access-the-city-backend.herokuapp.com/api/businesses/?city=${value}&type=${activity}';
+     var url = 'https://access-the-city-backend.herokuapp.com/api/businesses/?city=${value}&type=${activity}&sort_by=distance&latitude=53.4860731&longitude=-2.2422875';
 
 
     
@@ -115,6 +118,7 @@ var route = new MaterialPageRoute(builder:(BuildContext context) => new Business
     }
 
       List<Widget> _buildGridTiles(numberOfTiles){
+    
         List<Container> containers = new List<Container>.generate(numberOfTiles, 
         (int index){
           final imageName = index < 6 ?

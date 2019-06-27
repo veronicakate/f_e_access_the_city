@@ -27,6 +27,10 @@ class _BusinessListState extends State<BusinessList> {
   }
 Widget build(BuildContext context) {
 
+  Color hexToColor(String code) {
+    return new Color(int.parse(code.substring(1, 7), radix: 16) + 0xFF000000);
+  }
+
   return Scaffold( 
      appBar: AppBar(
        
@@ -54,17 +58,28 @@ Widget build(BuildContext context) {
         child: new Center( 
            child:  new  Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-         children: <Widget>[  
+         children: <Widget>[ 
+
            new Card( 
-             child : new Container( 
+          
+// shape: RoundedRectangleBorder(
+//                borderRadius: BorderRadius.circular(20.0),
+            
+            
+//               ),            
+shape: Border.all(color: hexToColor("#673BB7"),width: 2),
+
+               child : new Container( 
                  width: 20.0,
+                 height: 220,
               // child: RaisedButton(
                 child: new InkWell(
                   child: new Container(
+                  
           child: new Text( 
              
-            "Name:   ${data[index]['business_name']}\n \nAddress: ${data[index]['address']}   ${data[index]['city']}\n\n Description:   ${data[index]['description']}${data[index]['city']}"
-            , style: TextStyle (fontSize: 16.0)),
+            "${data[index]['business_name']}\n\n${data[index]['distance']} miles away \nRating:  ${data[index]['rating']}"
+            , style: TextStyle (fontSize: 28.0)),
              
                   ),
             
@@ -76,8 +91,7 @@ Widget build(BuildContext context) {
             );
          },
         ),
-         
-               padding:const EdgeInsets.all(20),
+               padding:const EdgeInsets.all(30),
              
              )
            )
