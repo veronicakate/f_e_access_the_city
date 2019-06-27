@@ -19,28 +19,12 @@ class _UserDashboardState extends State<UserDashboard> {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         elevation: 0.0,
         title: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Container(
-                  margin: EdgeInsets.only(right: 80),
-                  child: RaisedButton(
-                    shape: new RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(10.0)),
-                    child: Text('Logout'),
-                    textColor: Colors.white,
-                    color: Colors.deepPurple,
-                    onPressed: () {
-                      var route = new MaterialPageRoute(
-                        builder: (BuildContext context) => new UserLanding(),
-                      );
-                      Navigator.of(context).push(route);
-                    },
-                  )),
               Image.asset("images/logo.png", width: 70.0, height: 40.0),
             ]),
         iconTheme: IconThemeData(color: hexToColor('#673BB7')),
@@ -55,15 +39,8 @@ class _UserDashboardState extends State<UserDashboard> {
               Container(
                 padding: EdgeInsets.fromLTRB(40.0, 100.0, 0.0, 0.0),
                 child: Text(
-                  'Where would you',
-                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(40.0, 130.0, 0.0, 0.0),
-                child: Text(
-                  'like to go?',
-                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+                  'Where would you like to go?',
+                  style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
                 ),
               ),
               Container(

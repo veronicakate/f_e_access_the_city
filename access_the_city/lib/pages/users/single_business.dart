@@ -20,7 +20,7 @@ class SingleBusiness extends StatelessWidget {
           Center(
               child: Text('Crazy Pedro\'s',
                   style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: 50.0))),
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 60.0))),
           Center(
               child: Container(
             padding: EdgeInsets.only(top: 20),
@@ -30,7 +30,7 @@ class SingleBusiness extends StatelessWidget {
                 child: Tooltip(
                     message: "Crazy Pedro\'s store front",
                     child:
-                        Image.asset('images/crazypedros.jpg', width: 300.0))),
+                        Image.asset('images/crazypedros.jpg', width: 400.0))),
           )),
           Align(
               alignment: Alignment.topLeft,
@@ -41,7 +41,7 @@ class SingleBusiness extends StatelessWidget {
                       children: [
                         Text(
                             'We love to party all the time at Crazy Pedro\'s. Grab a Frozen Margarita and a slice of Pizza and watch the party unfold',
-                            style: TextStyle(fontSize: 20.0))
+                            style: TextStyle(fontSize: 30.0))
                       ]))),
           Align(
               alignment: Alignment.center,
@@ -52,7 +52,7 @@ class SingleBusiness extends StatelessWidget {
                       children: [
                         Tooltip(
                             message: '4 stars',
-                            child: Image.asset('images/stars.png'))
+                            child: Image.asset('images/stars.png', width: 200))
                       ]))),
           Align(
               alignment: Alignment.topLeft,
@@ -63,9 +63,9 @@ class SingleBusiness extends StatelessWidget {
                       children: [
                         Text('Facilities',
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0)),
+                                fontWeight: FontWeight.bold, fontSize: 50.0)),
                         Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Tooltip(
                                   message: 'wheelchair access',
@@ -90,9 +90,9 @@ class SingleBusiness extends StatelessWidget {
                       children: [
                         Text('Address',
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20.0)),
+                                fontWeight: FontWeight.bold, fontSize: 50.0)),
                         Text('1 Short St, M3 3BQ',
-                            style: TextStyle(fontSize: 20.0))
+                            style: TextStyle(fontSize: 40.0))
                       ]))),
           Center(
             child: Column(children: [
