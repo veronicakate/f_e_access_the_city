@@ -23,9 +23,15 @@ class SingleBusiness extends StatelessWidget {
                       TextStyle(fontWeight: FontWeight.bold, fontSize: 50.0))),
           Center(
               child: Container(
-                  padding: EdgeInsets.only(top: 20),
-                  child: Image.asset('images/crazypedros.jpg'),
-                  width: 300.0)),
+            padding: EdgeInsets.only(top: 20),
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(width: 5, color: Colors.black)),
+                child: Tooltip(
+                    message: "Crazy Pedro\'s store front",
+                    child:
+                        Image.asset('images/crazypedros.jpg', width: 300.0))),
+          )),
           Align(
               alignment: Alignment.topLeft,
               child: Container(
