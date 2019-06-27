@@ -8,12 +8,6 @@ class SingleBusiness extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0.0,
-          title: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Image.asset("images/logo.png", width: 70.0, height: 40.0)
-              ]),
           iconTheme: IconThemeData(color: Colors.deepPurple),
         ),
         body: ListView(children: [

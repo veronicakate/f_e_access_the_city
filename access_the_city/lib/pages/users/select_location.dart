@@ -21,14 +21,7 @@ class _UserDashboardState extends State<UserDashboard> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
-        title: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Image.asset("images/logo.png", width: 70.0, height: 40.0),
-            ]),
-        iconTheme: IconThemeData(color: hexToColor('#673BB7')),
-        // iconTheme: IconThemeData(color: Colors.red,size:100, opacity: 1),
+        iconTheme: IconThemeData(color: Colors.deepPurple),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -10,18 +10,7 @@ class UserLanding extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0.0,
-
-          title: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Image.asset("images/logo.png", width: 70.0, height: 40.0),
-                Container(
-                    // padding:const EdgeInsets.all(20.0),
-                    )
-              ]),
           iconTheme: IconThemeData(color: Colors.deepPurple),
-          // iconTheme: IconThemeData(color: Colors.red,size:100, opacity: 1),
         ),
         body: Center(
             child: Column(

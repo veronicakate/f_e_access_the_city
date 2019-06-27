@@ -29,18 +29,7 @@ class _UserSignInState extends State<UserSignIn> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
-
-        title: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Image.asset("images/logo.png", width: 70.0, height: 40.0),
-              Container(
-                  // padding:const EdgeInsets.all(20.0),
-                  )
-            ]),
         iconTheme: IconThemeData(color: Colors.deepPurple),
-        // iconTheme: IconThemeData(color: Colors.red,size:100, opacity: 1),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,11 +40,9 @@ class _UserSignInState extends State<UserSignIn> {
             children: <Widget>[
               Container(
                 padding: EdgeInsets.fromLTRB(15.0, 70.0, 0.0, 0.0),
-                child: Text(
-                  'Login',
-                  style:
-                      TextStyle(fontSize: 80.0, fontWeight: FontWeight.normal)
-                ),
+                child: Text('Login',
+                    style: TextStyle(
+                        fontSize: 80.0, fontWeight: FontWeight.normal)),
               )
             ],
           )),
