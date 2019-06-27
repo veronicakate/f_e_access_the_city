@@ -35,12 +35,12 @@ class SingleBusiness extends StatelessWidget {
           Align(
               alignment: Alignment.topLeft,
               child: Container(
-                  margin: EdgeInsets.only(top: 20.0, left: 20.0),
+                  margin: EdgeInsets.only(top: 20.0, left: 15.0),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Text(
-                            'We love to party all the time at NQ Pizza\'s. Grab a Frozen Margarita and a slice of Pizza and watch the party unfold',
+                            'We love to party all the time at Crazy Pedro\'s. Grab a Frozen Margarita and a slice of Pizza and watch the party unfold',
                             style: TextStyle(fontSize: 20.0))
                       ]))),
           Align(
@@ -58,7 +58,7 @@ class SingleBusiness extends StatelessWidget {
           Align(
               alignment: Alignment.topLeft,
               child: Container(
-                  margin: EdgeInsets.only(top: 20.0, left: 20.0),
+                  margin: EdgeInsets.only(top: 20.0, left: 15.0),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
@@ -70,14 +70,15 @@ class SingleBusiness extends StatelessWidget {
           Align(
               alignment: Alignment.topLeft,
               child: Container(
-                  margin: EdgeInsets.only(top: 20.0, left: 20.0),
+                  margin: EdgeInsets.only(top: 20.0, left: 15.0),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Text('Address',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20.0)),
-                        Text('address', style: TextStyle(fontSize: 20.0))
+                        Text('1 Short St, M3 3BQ',
+                            style: TextStyle(fontSize: 20.0))
                       ]))),
           Center(
             child: Column(children: [
