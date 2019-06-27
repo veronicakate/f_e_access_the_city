@@ -14,9 +14,10 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: '>=2.1.0 <3.0.0'
 
 dependencies:
+  url_launcher: ^5.0.3
   flutter:
     sdk: flutter
   http:
@@ -29,37 +30,41 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  assets:
-  - images/logo.png
-  - images/activity01.png
-  - images/activity02.png
-  - images/activity03.png
-  - images/activity04.png
-  - images/activity05.png
-  - images/activity06.png
-  - images/star01.png
-  
-  #  - images/a_dot_ham.jpeg
+  assets
 
+    - images/star01.png
+    - images/logo.png
+    - images/activity01.png
+    - images/activity02.png
+    - images/activity03.png
+    - images/activity04.png
+    - images/activity05.png
+    - images/activity06.png
+    - images/crazypedros.jpg
+    - images/star.png
+    - images/cognitive.png
+    - images/aural.png
+    - images/mobility.png
+    - images/visual.png
+    - images/dog.png
+    - images/audiodesc.png
+
+  #  - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
-
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
-
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
