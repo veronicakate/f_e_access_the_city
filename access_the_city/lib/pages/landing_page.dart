@@ -29,7 +29,12 @@ class LandingPage extends StatelessWidget {
                 child: RaisedButton(
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(20.0)),
-                  child: Text('I am a User'),
+                  child: Text('I am a User',
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 35.00,
+                      )),
                   textColor: Colors.white,
                   color: Colors.deepPurple,
                   onPressed: () {
@@ -47,8 +52,12 @@ class LandingPage extends StatelessWidget {
                 child: RaisedButton(
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(20.0)),
-                  child: Text('I am a Business'),
-                  padding: const EdgeInsets.all(18.0),
+                  child: Text('I am a Business',
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 35.00,
+                      )),
                   textColor: Colors.white,
                   color: Colors.deepPurple,
                   onPressed: () {
