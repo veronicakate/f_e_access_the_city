@@ -39,7 +39,7 @@ class _UserSignInState extends State<UserSignIn> {
               child: Stack(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.fromLTRB(15.0, 70.0, 0.0, 0.0),
+                padding: EdgeInsets.fromLTRB(15.0, 50.0, 0.0, 0.0),
                 child: Text('Login',
                     style: TextStyle(
                         fontSize: 80.0, fontWeight: FontWeight.normal)),
@@ -53,24 +53,24 @@ class _UserSignInState extends State<UserSignIn> {
                 TextField(
                   controller: emailController,
                   decoration: InputDecoration(
-                      labelText: 'EMAIL',
+                      labelText: 'Email',
                       labelStyle: TextStyle(
                           fontFamily: 'Montserrat',
                           fontWeight: FontWeight.bold,
                           color: Colors.black,
-                          fontSize: 20.0),
+                          fontSize: 35.0),
                       focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.black))),
                 ),
                 SizedBox(height: 20.0),
                 TextField(
                     decoration: InputDecoration(
-                        labelText: 'PASSWORD',
+                        labelText: 'Password',
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
-                            fontSize: 20.0),
+                            fontSize: 35.0),
                         focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.black))),
                     obscureText: true,

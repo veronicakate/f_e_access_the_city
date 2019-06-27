@@ -30,14 +30,11 @@ class _UserDashboardState extends State<UserDashboard> {
               child: Stack(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.fromLTRB(40.0, 100.0, 0.0, 0.0),
+                padding: EdgeInsets.fromLTRB(20.0, 30.0, 0.0, 0.0),
                 child: Text(
                   'Where would you like to go?',
                   style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
                 ),
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(15.0, 175.0, 0.0, 0.0),
               ),
             ],
           )),

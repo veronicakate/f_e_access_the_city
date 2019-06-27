@@ -14,7 +14,7 @@ class SingleBusiness extends StatelessWidget {
           Center(
               child: Text('Crazy Pedro\'s',
                   style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: 60.0))),
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 55.0))),
           Center(
               child: Container(
             padding: EdgeInsets.only(top: 20),
@@ -33,6 +33,9 @@ class SingleBusiness extends StatelessWidget {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
+                        Text('Description',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 50.0)),
                         Text(
                             'We love to party all the time at Crazy Pedro\'s. Grab a Frozen Margarita and a slice of Pizza and watch the party unfold',
                             style: TextStyle(fontSize: 30.0))
